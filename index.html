@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Google Trends Resep Masakan</title>
+  </head>
+  <body style="height: 100vh">
+    <script
+      type="text/javascript"
+      src="https://ssl.gstatic.com/trends_nrtr/3349_RC01/embed_loader.js"
+    ></script>
+    <script type="text/javascript">
+      trends.embed.renderExploreWidget(
+        "TIMESERIES",
+        {
+          comparisonItem: [
+            { keyword: "/m/0p57p", geo: "ID", time: "today 5-y" },
+          ],
+          category: 0,
+          property: "",
+        },
+        {
+          exploreQuery: "date=today%205-y&geo=ID&q=%2Fm%2F0p57p&hl=id",
+          guestPath: "https://trends.google.co.id:443/trends/embed/",
+        }
+      );
+    </script>
+    <script>
+      window.addEventListener("load", function () {
+        const iframeId = document.getElementById("trends-widget-1");
+        iframeId.style.height = "100%";
+      });
+    </script>
+  </body>
+</html>
